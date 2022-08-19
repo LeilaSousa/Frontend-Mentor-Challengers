@@ -17,7 +17,7 @@
 }body{
   background-color: var(--Cream);
 }
-
+/*mobile*/
 @media only screen and (min-width: 200px)and (max-width: 600px) {
 #geral{
   display: flex;
@@ -30,7 +30,7 @@
   height: 250px;
   border-radius: 10px 10px 0px 0px;
 }#information{
-  background-color: var(--White);
+    background-color: var(--White);
   height: 375px;
   width: 360px;
   border-radius: 0px 0px 10px 10px;
@@ -88,7 +88,7 @@
 }footer a 
 { color: hsl(228, 45%, 44%); }
 }
-
+/*desktop*/
 @media only screen and (min-width: 600px) and (max-width: 1440px){
 #geral{
   display: flex;
