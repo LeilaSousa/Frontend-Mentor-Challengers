@@ -8,7 +8,7 @@
     --VeryDarkBlue: hsl(216, 12%, 8%);
   /*fonts*/
    --Overpass: 'Overpass', sem serifa;
-   }*{
+  }*{
       margin: 0px;
       padding: 0px;
     }body{
@@ -32,7 +32,7 @@
     }h1{
       margin-top: 1em;
       margin-bottom: 0.5em;
-    }p{
+    }.pinfo, p{
       color: var(--LightGrey);
       font-size: 15px;
       text-align: left;
@@ -68,10 +68,8 @@
     }.submit:hover{
       background-color: white;
       color: var(--Orange);
-    }
-    #activestate{
+    }#activestate{
       display : none;
-
     }.imgthank{
       margin-left: 7em;
     }.active{
@@ -92,3 +90,29 @@
     }
     footer { font-size: 11px; text-align: center; }
     footer a { color: hsl(228, 45%, 44%); }
+  
+    /*mobile*/
+    @media only screen and (max-width: 600px){
+    .container, .activestate{
+     width:300px;
+     padding: 30px;
+    }h1{
+      margin-top: 0.5em;
+    }p{
+      margin-bottom: 1em;
+      padding-right: 4em;
+    }.pinfo{
+      padding: 0em;
+      margin-bottom: 2em;
+    }.submit{
+      padding: 1em 8em 1em 9em;
+    }.imgthank{
+      margin-left: 5em;
+    }.active{
+      margin-left: 3em;
+      margin-right: 3em;
+      margin-top: 1em;
+    }.pactive{
+      padding-right: 0em;
+      padding-left: 0em;}
+    }
