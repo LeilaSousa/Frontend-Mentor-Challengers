@@ -9,116 +9,177 @@
   @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
   :root{
    /*colors*/
-  --Orange: hsl(25, 97%, 53%);
-  --LightGrey: hsl(217, 12%, 63%);
-  --MediumGrey: hsl(216, 12%, 54%);
-  --DarkBlue: hsl(213, 19%, 18%);
-  --VeryDarkBlue: hsl(216, 12%, 8%);
+    --Orange: hsl(25, 97%, 53%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsla(216, 12%, 54%, 0.200);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
   /*fonts*/
-  --Overpass: 'Overpass', sem serifa;
+   --Overpass: 'Overpass', sem serifa;
    }*{
       margin: 0px;
       padding: 0px;
     }body{
-      background-color: var(--VeryDarkBlue);
+      background-color:var(--VeryDarkBlue);
       color:white;
-    }.container{
+      max-height: 100vh;    
+    }.container, .activestate{
       background-color: var(--DarkBlue);
       font-family: var(--Overpass);
-      width:450px;
-      height: 50vh;
+      width:400px;
+      height: 55vh;
       margin: auto;
-      margin-top: 25vh;
-      padding: 3em;
+      margin-top: 100px;
+      padding: 50px;
       border-radius: 20px;
-    }img{
+    }.imgstar{
       border-radius: 50%;
-      padding: 0.5em;
+      padding: 0.8em;
       background-color: var(--MediumGrey);
-      margin-bottom: 1em;
+      margin-top: -1em;
     }h1{
+      margin-top: 1em;
       margin-bottom: 0.5em;
     }p{
       color: var(--LightGrey);
       font-size: 15px;
       text-align: left;
       line-height: 2em;
-    }
-  
-    
-    .submit{
+      margin-bottom: 2em;
+      padding-right: 6em;
+    }form{
+      display: flex;
+      flex-direction: row;
+    }label{
+      margin-right: -80px;
+      padding: 1em 1.3em 1em 1.3em;
+      border-radius: 50%;
+      border: none;
+      background-color:var(--MediumGrey) ;
+      color: var(--LightGrey);
+      font-weight: 700;   
+    }label:hover{
+      background-color: var(--LightGrey);
+      color: white;
+    }label:active{
+      background-color: var(--Orange);
+      color: white;
+    }.rad{display: none
+    }.submit{
       background-color: var(--Orange);
       border: none;
-      margin-top: 5em;
-      padding: 1em 15em 1em 15em;
+      padding: 1em 13em 1em 13em;
       border-radius: 5em;
       color: white;
       font-weight: 700;
-     
-      
+      letter-spacing: 0.2em;
+    }.submit:hover{
+      background-color: white;
+      color: var(--Orange);
     }
-
-
     #activestate{
-      visibility: hidden;
+      display : none;
+
+    }.imgthank{
+      margin-left: 7em;
+    }.active{
+      color: var(--Orange);
+      background-color: var(--MediumGrey);
+      border-radius: 5em;
+      text-align: center;
+      margin-left: 5em;
+      margin-right: 5em;
+      margin-top: 2em;
+      padding: 0.5em;
+    }.h1active{
+      text-align: center;
+    }.pactive{
+      text-align: center;
+      padding-right: 2em;
+      padding-left: 2em
     }
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+
+
+    footer { font-size: 11px; text-align: center; }
+    footer a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-<div class="container">  
-    <img src="images/icon-star.svg" alt="Icon star">
-    <h1>How did we do?</h1>
-    <p>
-      Please let us know how we did with your support request. All feedback is appreciated
-      to help us improve our offering!
-    </p>
-   
-      <input type="button"value="1"name="number">
-      <input type="button"value="2"name="number">
-      <input type="button"value="3"name="number">
-      <input type="button"value="4"name="number">
-      <input type="button"value="5"name="number">
-    
-        
-        
-    <br>
-    
-    
-    <button class="submit"onclick="submit()">Submit</button>
-</div>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-
-  <div id="activestate">
-
-    <p>
-      You selected 
-      <div id="res"></div>
-      out of 5
-    </p>
-    <h1>Thank you!</h1>
-    <p>
-      We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
-    </p>
+  <div class="container" id="container">  
+      <img class="imgstar"src="images/icon-star.svg" alt="Icon star">
+      <h1>How did we do?</h1>
+      <p>
+        Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!
+      </p>
+      <form action="">
+        <p>
+          <input type="radio"name="radnota"class="rad" id="n1"value="1">
+          <label for="n1">1</label>
+        </p>
+        <p>
+          <input type="radio"name=radnota class="rad" id="n2" value="2">
+          <label for="n2">2</label>
+        </p>
+        <p>
+          <input type="radio"name=radnota class="rad" id="n3" value="3">
+          <label for="n3">3</label>
+        </p>
+        <p>
+          <input type="radio"name=radnota class="rad" id="n4" value="4">
+          <label for="n4">4</label>
+        </p>
+        <p>
+          <input type="radio"name=radnota class="rad" id="n5" value="5">
+          <label for="n5">5</label>
+        </p>
+      </form>
+      <br>
+      <input type="button" value="SUBMIT"class="submit"onclick="submit()">
   </div>
   
 
+  <div id="activestate"class="activestate">
+    <img class="imgthank"src="images/illustration-thank-you.svg" alt="Thankyou illustration">
+    <p class="active">
+      You selected 
+      <span id="res"></span>
+      out of 5
+    </p>
+    <h1 class="h1active">Thank you!</h1>
+    <p class="pactive">
+      We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
+    </p>
+  </div>
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/LeilaSousa">Leila Sousa</a>.
+  </footer>
+  
+
   <script>
-      let nota = document.getElementsByName('number')
+    
+    function submit(){
       let res = document.getElementById('res')
       let active = document.getElementById('activestate')
-    function submit() {
-     
-    
-      res.innerHTML = Number(nota.value)
-      active.style.visibility = "visible"
+      let initial = document.getElementById('container')
+      let button = document.querySelector('input[class=rad]:checked').value
 
+      res.innerHTML = `${button}`
+
+      active.style.display = "block"
+
+      initial.style.display = "none"
+      
     }
+   
+
+  
+
+     
   </script>
 </body>
 </html>
