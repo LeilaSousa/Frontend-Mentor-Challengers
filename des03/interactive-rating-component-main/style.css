@@ -60,7 +60,7 @@
     }label:active{
       background-color: var(--Orange);
       color: white;
-    }.rad{display: none
+    }.rad{display: none;
     }.submit{
       background-color: var(--Orange);
       border: none;
@@ -73,7 +73,7 @@
       background-color: white;
       color: var(--Orange);
     }#activestate{
-      display : none;
+      display : none ;
     }.imgthank{
       margin-left: 7em;
     }.active{
@@ -91,9 +91,8 @@
       text-align: center;
       padding-right: 2em;
       padding-left: 2em
-    }
-    footer { font-size: 11px; text-align: center; }
-    footer a { color: hsl(228, 45%, 44%); }
+    }footer { font-size: 11px; text-align: center; 
+    }footer a { color: hsl(228, 45%, 44%); }
   
     /*mobile*/
     @media only screen and (max-width: 600px){

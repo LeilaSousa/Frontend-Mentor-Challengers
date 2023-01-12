@@ -1,8 +1,8 @@
 function submit(){
-    let res = document.getElementById('res')
-    let active = document.getElementById('activestate')
-    let initial = document.getElementById('container')
-    let button = document.querySelector('input[class=rad]:checked').value
+    const res = document.getElementById('res')
+    const active = document.getElementById('activestate')
+    const initial = document.getElementById('container')
+    const button = document.querySelector('input[class=rad]:checked').value
 
     res.innerHTML = `${button}`
 
@@ -11,3 +11,5 @@ function submit(){
     initial.style.display = "none"
 
   }
+  
+  
